@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<style>
+  @media only screen and (max-width: 555px) {
+       #input{
+      max-width: 120%;
+  }
+  #form{
+    margin-left: -40px;
+  }
+  #button
+  {
+max-width: 300px;
+  }
+}
+</style>
+<body>
+    <div>
+    <div  style="text-align:center;padding: 60px;">
+        <h1>Oturum <Span>Aç</span></h1><br>
+            <p style="    font-size: 25px;color: green;"></p>
+    </div>
+    <div style="    text-align: -webkit-center;">
+        <form style="width: 65%;" action="" id="form">
+            <div class="mb-3">
+              <input type="email" id="email" name="email" class="form-control" id="input" placeholder="Eposta" style="    height: 47px;    width: 380px;"><br>
+              <input type="password" class="form-control" id="input" placeholder="Şifre" style="    height: 47px;    width: 380px;">
+            </div>
+            <button type="submit" id="button" class="form-control" style=" background-color: rgba(0, 220, 169, 0.384); color:white;  width: 380px;
+            font-size: 18px;
+            height: 55px;" disabled><b id="ButtonIc" style="color:rgba(245, 245, 245, 0.952);">Kayıt Olmak</b> </button>
+          </form>
+          </form>
+          <div style="text-align:center;display: inline-block;"class="mt-3">
+            <div style="width: 133px;
+            margin-right: -180px;
+            display: inline-grid;
+            "><hr></div> <span>veya</span> <div style="
+            width: 133px;
+    margin-left: -181px;
+    display: inline-grid;
+            "><hr></div>
+          </div><br><br><br>
+          <a href="Eposta.html">Bir hesaba mı ihtiyacınız var? Üye olmak</a><br>
+          <a href="">Parolanızı mı unuttunuz?</a>
+    </div>
+</div>
+<script>
+  
+var myInput = document.getElementById("email");
+var myInput2 = document.getElementById("input").value;
+
+myInput.onkeyup = function() {
+  // Validate capital letters
+  var upperCaseLetters = /[@]/g;  
+  if(myInput.value.match(upperCaseLetters)) {  
+
+  } 
+
+  if( myInput.value.match(upperCaseLetters))
+  {
+    if(myInput2 != null)
+    {
+    const button = document. querySelector('button')
+    button. disabled = false;
+    document.getElementById('button').style.backgroundColor="#00dca9";
+    document.getElementById('ButtonIc').style.color="white";
+
+    }
+  }
+}
+</script>
+</body>
+</html>

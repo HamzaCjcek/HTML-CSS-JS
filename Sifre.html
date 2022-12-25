@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<style>
+  @media only screen and (max-width: 995px) {
+    #input{
+    max-width: 285px;
+  }
+  #psw{
+    max-width: 285px;
+  }
+  #form{
+    margin-left: -40px;
+  }
+  #message span {
+    margin: -18px;
+    margin-right: -20px;
+}#min{
+     font-size: 12px;
+     margin-right: -15px;
+}
+#min2{
+     font-size: 12px;
+     margin-left: 10px;
+     width: 60px;
+}
+#min3{
+     font-size: 12px;
+     margin-left: 16px;
+}
+#message {
+ 
+  max-width: 275px;
+}
+#button
+{
+  max-width: 284px;
+}
+
+}
+/* Style all input fields */
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Style the container for inputs */
+.container {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  color: #000;
+  position: relative;
+ 
+  width: 500px;
+}
+
+#message span {
+  padding: 4px 25px;
+    font-size: 13px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "sss";
+    background-color: green;
+    border-radius: 50%;
+    font-size: 8px;
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "sss";
+    background-color: red;
+    border-radius: 50%;
+    font-size: 8px;
+}
+</style>
+<body>
+    <div>
+    <div  style="text-align:center;padding: 60px;">
+        <h1>Ücretsiz  <Span style="color: #00dca9;">hesap oluştur</span></h1>
+            <p style="    font-size: 25px;">Koşulsuz!</p>
+    </div>
+    <div style="text-align: -webkit-center;">
+        <form style="width: 65%;" id="form" action="" >
+            <div class="">
+              <input type="password" class="form-control"  id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required placeholder="Şifre" style="height: 48px;width: 378px;" > 
+              
+            </div>
+            <div id="message" style="margin-right:60px;font-size:13px;" id="son">
+              <div class="container" style="background-color:white;">
+                <div class="row justify-content-md-center">
+                  <div class="col col-lg-5">
+                    <span id="letter" id="nok1" class="invalid" style="margin-left: -15px;"></span>
+                    <p id="min2"><b>Bir Küçük Harf</b></p>
+                  </div>
+                  <div class="col col-lg-5">
+                    <span id="capital" id="nok1" class="invalid" style="margin-left: -15px;"></span>
+                    <p id="min2"><b>Bir Büyük Harfe</b></p>
+                  </div>
+
+                  <div class="col col-lg-5">
+                    <span id="number" id="nok1" class="invalid" style="margin-left: -15px;"></span>
+                    <p id="min3" style="margin-right:35px;"><b>Bir Sayi</b></p>
+                  </div>
+                  <div class="col col-lg-5">
+                    <span id="length" id="nok1" class="invalid" style="margin-left: -15px;"></span>
+                    <p id="min" style="margin-left:-20px;"><b>Min 8 karakter</b></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="submit" id="button" class="form-control" style=" background-color: rgba(0, 220, 169, 0.384); color:white;  width: 380px;
+            font-size: 18px;
+            height: 55px;" disabled><b id="ButtonIc" style="color:rgba(245, 245, 245, 0.952);">Sonraki</b> </button>
+          </form>
+          <br>
+          <p style="font-size:8px;">Bir hesap oluşturarak, <a href="">Şartlar Ve Koşullar</a> ve <a href="">Gizlilik Politikası.</a>Bu site tarafından korunmaktadır </p>
+          <p style="font-size:8px;">reCAPTCHA ve Google <a href=""> Gizlilik Politikası</a> and <a href=""> Kullanım Şartları</a> uygulamak.</p>
+    </div>
+</div>
+
+
+
+			
+<script>
+  var myInput = document.getElementById("psw");
+  var letter = document.getElementById("letter");
+  var capital = document.getElementById("capital");
+  var number = document.getElementById("number");
+  var length = document.getElementById("length");
+ 
+  
+
+
+  // When the user clicks on the password field, show the message box
+  myInput.onfocus = function() {
+    document.getElementById("message").style.display = "block";
+ 
+  }
+  
+  // When the user clicks outside of the password field, hide the message box
+  myInput.onblur = function() {
+    document.getElementById("message").style.display = "none";
+  }
+  
+  // When the user starts to type something inside the password field
+  myInput.onkeyup = function() {
+    // Validate lowercase letters
+    var lowerCaseLetters = /[a-z]/g;
+    if(myInput.value.match(lowerCaseLetters)) {  
+      letter.classList.remove("invalid");
+      letter.classList.add("valid");
+    } else {
+      letter.classList.remove("valid");
+      letter.classList.add("invalid");
+    }
+    
+    // Validate capital letters
+    var upperCaseLetters = /[A-Z]/g;  
+    if(myInput.value.match(upperCaseLetters)) {  
+      capital.classList.remove("invalid");
+      capital.classList.add("valid");
+    } else {
+      capital.classList.remove("valid");
+      capital.classList.add("invalid");
+    }
+  
+    // Validate numbers
+    var numbers = /[0-9]/g;
+    if(myInput.value.match(numbers)) {  
+      number.classList.remove("invalid");
+      number.classList.add("valid");
+    } else {
+      number.classList.remove("valid");
+      number.classList.add("invalid");
+    }
+    
+    // Validate length
+    if(myInput.value.length >= 8) {
+      length.classList.remove("invalid");
+      length.classList.add("valid");
+    } else {
+      length.classList.remove("valid");
+      length.classList.add("invalid");
+    }
+
+    if(myInput.value.match(lowerCaseLetters) && myInput.value.match(upperCaseLetters) && myInput.value.match(numbers) && myInput.value.length >= 8)
+    {
+      const button = document. querySelector('button')
+      button. disabled = false;
+      document.getElementById('button').style.backgroundColor="#00dca9";
+      document.getElementById('ButtonIc').style.color="white";
+    }
+  }
+  </script>
+</body>
+</html>
